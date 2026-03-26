@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+}
+.title {
+    text-align: center;
+    margin: 20px 0;
+}
+.task-form {
+    width: 600px;
+    margin: auto;
+}
+.task-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.task-card input {
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+.task-content {
+    flex: 1;
+    margin-left: 10px;
+}
+.task-content h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #222;
+}
+.task-content p {
+    margin: 2px 0 0;
+    font-size: 13px;
+    color: #666;
+}
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+.task-buttons button {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+}
+.delete-btn {
+    background: #e74c3c;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+.update-btn {
+    background: #3498db;
+}
+.update-btn:hover {
+    background: #2980b9;
+}
+.delete-all-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: crimson;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.delete-all-btn:hover {
+    background: darkred;
+}
+h3{
+    text-align: center;
+    margin-top: 20%;
+    color: red;
+}

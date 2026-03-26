@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+<body>
+    <%- include('navbar') %>
+    <h1 class="title">My Todo Lists</h1>
+
+    <form action="/delete-multiple" method="POST" class="task-form">
+         <% if(tasks.length > 0){ %>
+        <% tasks.map((task)=>{ %>
+            <div class="task-card">                
+                <input type="checkbox" name="ids" value="<%= task._id%>">
+                <div class="task-content">
+                    <h2><%= task.title %></h2>
+                    <p><%= task.discription %></p>
+                </div>
+                <div class="task-buttons">
+                    <a href="/delete/<%=task._id%>">
+                        <button type="button" class="delete-btn">Delete</button>
+                    </a>
+                    <a href="/nevigate/<%=task._id%>">
+                        <button type="button" class="update-btn">Update</button>
+                    </a>
+                </div>
+            </div>
+        <% }) %>      
+            <button class="delete-all-btn">Delete Selected</button>
+       <% } else{%>
+        <h3>Please Add todos</h3>
+        <% } %>
+    </form>
+</body>
+</html>
